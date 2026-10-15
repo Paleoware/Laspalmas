@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Las Palmas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Bebas+Neue&family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-container">
+
+            <a href="#" class="logo-link">
+                <img src="img/logo_Las_Palmas.webp" alt="Logo Las Palmas">
+            </a>
+
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mobile-menu">
+                <ul>
+                    <li><a href="#welcome" onclick="toggleMenu()">Inicio</a></li>
+                    <li><a href="#carta" onclick="toggleMenu()">Nuestra carta</a></li>
+                    <li><a href="#reservas" onclick="toggleMenu()">Reservas</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="welcome" id="welcome">
+            <div class="title">
+                <h1>Las Palmas</h1>
+                <h2>Fuego desde 1967</h2>
+            </div>
+        </section>
+
+        <section class="restaurante" id="restaurante">
+
+            <div class="carousel container">
+                <img src="img/brindis.webp" class="slide active" alt=" Cerveza con pizza">
+                <img src="img/cafe_medialunas.webp" class="slide" alt="Cafe con medialunas">
+                <img src="img/cafe_torta.webp" class="slide" alt="Cafe y torta">
+                <img src="img/camarera.webp" class="slide" alt="Camarera llevando bebidas">
+                <img src="img/empanadas.webp" class="slide" alt="Empanadas">
+                <img src="img/fugazzeta.webp" class="slide" alt="Fugazzeta">
+                <img src="img/medialunas.webp" class="slide" alt="Medialunas con dulce de leche">
+                <img src="img/mila_empanadas.webp" class="slide" alt="Milanesa y empanadas">
+                <img src="img/milanesa_ensalada.webp" class="slide" alt="Milanesa con ensalada">
+                <img src="img/milanesa_pure.webp" class="slide" alt="Milanesa con pure">
+                <img src="img/pizza_anchoas.webp" class="slide" alt="Pizza con anchoas">
+                <img src="img/pizza_humeante.webp" class="slide" alt="Pizza humeante">
+                <img src="img/pizza_humeante_2.webp" class="slide" alt="Pizza humeante">
+                <img src="img/pizza_jamon.webp" class="slide" alt="Pizza con jamon">
+                <img src="img/pizza_morron.webp" class="slide" alt="Pizza con morron">
+                <img src="img/pizza_queso_2.webp" class="slide" alt="Pizza con mucho queso">
+                <img src="img/pizza_queso.webp" class="slide" alt="Pizza con mucho queso">
+                <img src="img/pizza_queso_3.webp" class="slide" alt="Pizza con mucho queso">
+                <img src="img/pizzero.webp" class="slide" alt="Maestro pizzero">
+                <img src="img/tortas_1.webp" class="slide" alt="Tortas variadas">
+                <img src="img/tortas_2.webp" class="slide" alt="Tortas variadas">
+            </div>
+            <div class="info-restaurante">
+                <h2>El restaurante</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, velit consequuntur.
+                    Voluptatem
+                    asperiores odit deleniti iste cupiditate, minus quos impedit laborum officia quaerat. Saepe
+                    optio atque
+                    nam, et cum sint!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam temporibus fuga inventore ratione,
+                    id quas corrupti possimus eum aspernatur velit tempora modi, accusantium nihil. Illo rerum non iste
+                    eligendi deserunt.</p>
+            </div>
+        </section>
+        <section class="carta" id="carta">
+            <p>Podes ver nuestra carta completa para consultar por nuestros platos,postres,reposteria y cafe</p>
+            <a href="https://drive.google.com/file/d/1WdZkl6jZJal-5pxrKGgToob4iKa5dWE6/view" class="btn">Nuestra
+                Carta
+            </a>
+
+        </section>
+        <section class="reserva-unificada" id="reservas">
+            <div class="reserva-content">
+                <div class="reserva-imagen">
+                    <img src="img/horno.webp" alt="Nuestro Horno de pizzero">
+                </div>
+
+                <div class="reserva-info">
+                    <div class="reserva-header">
+                        <h2>Reserva</h2>
+                        <h1>TU MESA</h1>
+                        <p class="subtitle">HAZ UNA RESERVA</p>
+                    </div>
+
+                    <div class="reserva-detalles">
+                        <p>Reserva una mesa de Domingo a Jueves: 06:00hs a 00:00hs.</p>
+                        <p>Viernes y Sábado: <strong>Abierto 24hs.</strong></p>
+
+                        <div class="divisor-linea"></div>
+
+                        <div class="reserva-card-box">
+                            <div class="tabs-reserva">
+                                <button class="tab-btn active" onclick="cambiarSede('lanus', this)">Lanús</button>
+                                <button class="tab-btn" onclick="cambiarSede('avellaneda', this)">Avellaneda</button>
+                                <button class="tab-btn" onclick="cambiarSede('patricios', this)">P. Patricios</button>
+                            </div>
+
+                            <div class="contacto-dinamico">
+                                <p id="direccion-sede">📍 Av H Yrigoyen 4498, Lanús</p>
+                                <div class="contacto-tel-box">
+                                    <span>CONTACTO:</span>
+                                    <a href="tel:42404554" id="link-telefono" class="tel-link">
+                                        <h3 id="texto-telefono">4240-4554</h3>
+                                    </a>
+                                </div>
+                                <div class="delivery-logos">
+                                    <a href="#" id="link-pedidosya" target="_blank">
+                                        <img src="img/logo-pya.webp" alt="PedidosYa" class="img-delivery">
+                                    </a>
+                                    <a href="#" id="link-rappi" target="_blank">
+                                        <img src="img/logo-rappi.webp" alt="Rappi" class="img-delivery">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container-pc">
+                <iframe id="mapa-google"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.135474320853!2d-58.3980386!3d-34.7269153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd3790510a71%3A0x6335930218b76426!2sAv.%20Hip%C3%B3lito%20Yrigoyen%204498%2C%20B1824%20Lan%C3%BAs%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1700000000000"
+                    width="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="resume">
+            <img src="img/logo_Las_Palmas.webp" alt="Logo de Las Palmas">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, officia nemo error adipisci aliquam totam
+                doloremque, ipsa accusantium, ullam quos explicabo eveniet consectetur reiciendis magni voluptate
+                aliquid ipsum quo corrupti.</p>
+        </section>
+
+        <section class="socials">
+            <h3>seguinos en nuestras redes sociales</h3>
+            <a href="https://www.facebook.com/pizzerialaspalmaslanus/?locale=es_LA">
+                <img src="img/Facebook_icon.webp" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/pizzerialaspalmas/?hl=es">
+                <img src="img/Instagram_icon.webp" alt="Instagram">
+            </a>
+        </section>
+        <section class="info">
+            <h3>informacion</h3>
+
+            <a href="mailto:contacto@pizzerialaspalmas.com.ar">
+                contacto@pizzerialaspalmas.com.ar
+            </a>
+            <p>pizzerialaspalmas.com.ar</p>
+        </section>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
